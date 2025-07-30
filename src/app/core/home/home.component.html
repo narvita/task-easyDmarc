@@ -1,0 +1,16 @@
+<div>
+  <h1>Registration</h1>
+
+  <mat-tab-group
+    [selectedIndex]="currentStep()"
+    (selectedIndexChange)="goToStep($event)"
+  >
+    <mat-tab
+      *ngFor="let step of steps; index as i"
+      [label]="step"
+      [disabled]="tabDisabled()[i]"
+    ></mat-tab>
+  </mat-tab-group>
+
+  <router-outlet></router-outlet>
+</div>

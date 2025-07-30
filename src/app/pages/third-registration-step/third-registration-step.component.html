@@ -1,0 +1,18 @@
+<section>
+  <h2>Thired Section</h2>
+
+  <form class="form-wrapper" [formGroup]="form">
+    <mat-form-field>
+      <mat-label>About Us</mat-label>
+      <textarea matInput formControlName="aboutUs" placeholder="Enter a detailed description"></textarea>
+    </mat-form-field>
+    <button
+      [disabled]="form.invalid"
+      mat-button
+      matStepperNext
+      (click)="nextStep()"
+    >
+      Next Step
+    </button>
+  </form>
+</section>

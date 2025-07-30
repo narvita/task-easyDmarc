@@ -1,0 +1,18 @@
+<!-- @if(userInformation.email) { -->
+<section class="user-info-wrapper">
+  <h2>User Information Summary</h2>
+
+  <mat-card>
+    <mat-card-content>
+      <p><strong>Email:</strong> {{ userInformation.email || "N/A" }}</p>
+      <p><strong>Industry:</strong> {{ userInformation.industy || "N/A" }}</p>
+      <p>
+        <strong>Experience Years:</strong>
+        {{ userInformation.experianceYears || "N/A" }}
+      </p>
+      <p><strong>Role:</strong> {{ userInformation.yourRole || "N/A" }}</p>
+      <p><strong>About Us:</strong> {{ userInformation.aboutUs || "N/A" }}</p>
+    </mat-card-content>
+  </mat-card>
+</section>
+<!-- } -->

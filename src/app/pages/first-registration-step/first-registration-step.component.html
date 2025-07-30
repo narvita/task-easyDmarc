@@ -1,0 +1,30 @@
+<section>
+  <h2>First Step</h2>
+  <form class="form-wrapper" [formGroup]="form">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" required />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Confirm Password</mat-label>
+      <input
+        matInput
+        type="password"
+        formControlName="confirmPassword"
+        autocomplete="true"
+      />
+    </mat-form-field>
+    <button
+      mat-button
+      [disabled]="form.invalid"
+      matStepperNext
+      (click)="nextStep()"
+    >
+      Next Step
+    </button>
+  </form>
+</section>

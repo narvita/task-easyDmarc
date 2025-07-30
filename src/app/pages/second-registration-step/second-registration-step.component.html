@@ -1,0 +1,33 @@
+<section class="form-wrapper">
+  <h2>Second Step</h2>
+  <form class="form-wrapper" [formGroup]="form">
+    <mat-form-field>
+      <mat-label>Select Industy</mat-label>
+      <mat-select formControlName="industy">
+        @for (item of industys; track item) {
+        <mat-option [value]="item">{{ item }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Years of Work</mat-label>
+      <input formControlName="experianceYears" matInput />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select Role</mat-label>
+      <mat-select formControlName="yourRole">
+        @for (item of yourRole ; track item) {
+        <mat-option [value]="item">{{ item }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <button
+      [disabled]="form.invalid"
+      mat-button
+      matStepperNext
+      (click)="nextStep()"
+    >
+      Next Step
+    </button>
+  </form>
+</section>
